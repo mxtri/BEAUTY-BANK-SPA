@@ -118,7 +118,16 @@ const Rendezvous: React.FC = () => {
             </div>
           )}
 
-          <input type="date" name="date" value={form.date} onChange={handleChange} required />
+          <div className="date-input-box">
+  <label>Date du rendez-vous</label>
+  <input
+    type="date"
+    name="date"
+    value={form.date}
+    onChange={handleChange}
+    required
+  />
+</div>
 
           <button 
             type="submit" 
