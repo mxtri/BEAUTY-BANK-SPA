@@ -904,7 +904,8 @@ a {
 
 .date-input-box label {
   margin-bottom: 8px;
-  color: white;
+  color:orange;
+  
 }
 
 .date-input-box input[type="date"] {
@@ -914,10 +915,14 @@ a {
   background: white;
   color: black;
   font-size: 16px;
-  -webkit-appearance: none;
-  appearance: none;
+  width: 100%;
 }
 
 input[type="date"]::-webkit-datetime-edit {
   color: black;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  filter: invert(0);
 }
