@@ -1,0 +1,36 @@
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Rendezvous from "./pages/Rendezvous";
+import AdminLogin from "./pages/AdminLogin";
+import Admin from "./pages/Admin";
+import Catalogue from "./pages/catalogue";
+import Compta from "./pages/compta"
+
+const App: React.FC = () => {
+  return (
+    <>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/rendezvous" element={<Rendezvous />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/catalogue" element={<Catalogue />} />
+        <Route path="/compta" element={<Compta />} />
+      </Routes>
+    </>
+  );
+};
+
+export default App;
+
+
+
+

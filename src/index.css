@@ -1,0 +1,896 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ff6600; /* orange principal */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar .links a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .links a:hover {
+  color: #000;
+}
+
+/* ===== HERO / HOME ===== */
+.hero {
+    /* Image gratuite de haute qualité avec un voile sombre pour le texte */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url("./assets/hero-bg.avif");
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Effet de glissement chic */
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    /* Ombre portée pour détacher le texte du fond */
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.hero button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hero button:hover {
+  background-color: #ff6600;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ===== ABOUT ===== */
+.about-container {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.about-container h2 {
+  color: #ff6600;
+  margin-bottom: 1rem;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* ===== RENDEZ-VOUS ===== */
+.rdv-container {
+  background-color: #fcf9f5; /* Un blanc légèrement crème */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif; /* Police élégante si tu l'as */
+}
+
+.rdv-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  overflow: hidden;
+}
+
+.rdv-card:hover {
+  transform: translateY(-5px);
+}
+
+.rdv-card h2 {
+  color: #ff6600; /* Or sombre */
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.rdv-card form input,
+.rdv-card form select,
+.rdv-card form button {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-size: 16px; /* Évite le zoom auto sur iPhone */
+}
+
+.rdv-card form select {
+  cursor: pointer;
+}
+
+.rdv-card form button {
+  background-color: #ff6600;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.rdv-card form button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ===== ADMIN ===== */
+.admin-container {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.admin-title {
+  color: #ff6600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.admin-table th {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.admin-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000;
+}
+
+/* ===== ADMIN LOGIN ===== */
+.rdv-card input[type="password"],
+.rdv-card button {
+  width: 100%;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 4rem;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .links {
+    margin-top: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+
+
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.price-display {
+  background: #ff6600;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.filter-box {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 10px;
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: black;
+}
+
+
+/*numero*/
+.contact-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.contact-menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  min-width: 180px;
+}
+
+.contact-menu a {
+  display: block;
+  padding: 8px;
+  color: black;
+  text-decoration: none;
+}
+
+.contact-menu a:hover {
+  background: #ff6600;
+  color: white;
+  border-radius: 6px;
+}
+
+.contact-dropdown:hover .contact-menu {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* SUCCESS MESSAGE */
+.success-delete {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  animation: fadeInScale 0.3s ease;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn {
+  background: #ccc;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.confirm-delete-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.confirm-delete-btn:hover {
+  background: #e60000;
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Style de base pour le bouton animé */
+.btn-animated {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #f06292; /* Couleur rose exemple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    
+    /* Définition de l'animation */
+    animation: pulse 1.5s infinite;
+}
+
+/* Définition de l'animation de battement */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(240, 98, 146, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(240, 98, 146, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(240, 98, 146, 0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.catalogue-container {
+    padding: 40px 20px;
+    background-color: #fdf5f8;
+    color: #333;
+    font-family: 'Poppins', sans-serif; /* Pense à importer cette police */
+}
+
+.catalogue-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.catalogue-header h1 {
+    font-size: 2.5rem;
+    color: #c2185b;
+    margin-bottom: 10px;
+}
+
+.catalogue-header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card h2 {
+    font-size: 1.5rem;
+    color: #ad1457;
+    border-bottom: 2px solid #f8bbd0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category-card li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.category-card li:last-child {
+    border-bottom: none;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.item-duration {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #c2185b;
+    font-size: 1.1rem;
+}
+
+
+
+/* ===== COmpta ===== */
+.compta-container {
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.compta-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.compta-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-save { background-color: #2ecc71; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
+.btn-cancel { background-color: #e74c3c; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
+
+.compta-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.compta-table th, .compta-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.compta-table th { background-color: #f1f1f1; }
+
+.footer-compta {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 2px solid #eee;
+    padding-top: 20px;
+}
+
+.btn-finish {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.total-display {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 10px;
+}
+
+.total-display span {
+    color: #c2185b;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/* Bouton supprimer dans le tableau */
+.btn-delete-row {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #e74c3c;
+    transition: transform 0.2s;
+}
+.btn-delete-row:hover { transform: scale(1.2); }
+
+/* Fenêtre Modal OUI/NON */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000;
+}
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.modal-btns {
+    display: flex; gap: 20px; justify-content: center; margin-top: 20px;
+}
+.btn-yes {
+    background: #2ecc71; color: white; border: none; padding: 10px 30px;
+    border-radius: 5px; cursor: pointer; font-weight: bold;
+}
+.btn-no {
+    background: #e74c3c; color: white; border: none; padding: 10px 30px;
+    border-radius: 5px; cursor: pointer; font-weight: bold;
+}
+
+/* Style du total */
+.total-display {
+    background: #fff3cd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 2px dashed #ffc107;
+}
+
+/* Masquage pour impression PDF */
+@media print {
+    .no-print, .btn-delete-row, .modal-overlay { display: none !important; }
+    .compta-container { width: 100%; }
+    table { border: 1px solid #ddd; }
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espace entre le rond et le texte */
+}
+
+.logo-circle {
+    width: 45px;  /* Taille du rond */
+    height: 45px;
+    border-radius: 50%; /* Rend le div parfaitement rond */
+    overflow: hidden; /* Coupe l'image pour qu'elle reste dans le cercle */
+    border: 2px solid black; /* Optionnel : un petit contour élégant */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image remplit le cercle sans se déformer */
+}
+
+.brand-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    letter-spacing: 1px;
+}
+
+
+/* Style pour le menu qui s'ouvre sur mobile */
+.mobile-menu-overlay {
+  position: absolute;
+  top: 0; /* Ajuste selon la hauteur de ta navbar */
+  left: 0;
+  width: 100%;
+  background-color: #ff6600; /* Ou la couleur de ton spa */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.mobile-menu-overlay a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+.button-group {
+  margin-top: 30px;
+  justify-content: center;
+}
+
+/* Sur mobile, on s'assure que les boutons ne sont pas trop collés au bord */
+@media (max-width: 767px) {
+  .hero {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+
+/* Conteneur principal */
+.rdv-container {
+  background-color: #fcf9f5; /* Un blanc légèrement crème */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif; /* Police élégante si tu l'as */
+}
+
+/* La carte du formulaire */
+.rdv-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  overflow: hidden;
+}
+
+/* Titre */
+.rdv-card h2 {
+  color: #a67c00; /* Or sombre */
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* Champs de saisie */
+.rdv-card input, 
+.rdv-card select {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 16px; /* Évite le zoom auto sur iPhone */
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+.rdv-card input:focus, 
+.rdv-card select:focus {
+  outline: none;
+  border-color: #d4af37; /* Or */
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+  background-color: #fff;
+}
+
+/* Bouton de confirmation */
+.btn-submit {
+  background: linear-gradient(135deg, #ff6600 0%, #a67c00 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(166, 124, 0, 0.3);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* Message de succès */
+.success-message {
+  background-color: #f0f9eb;
+  color: #67c23a;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid #e1f3d8;
+}
+.category-card {
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+}
+
+.item-name {
+  color: #333;
+}
+
+/* Effet au survol des lignes de soin */
+.category-card li:hover {
+  background-color: #fffaf0;
+  border-radius: 4px;
+}
