@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { supabase } from "../lib/supabase";
 import { useIsMobile } from '../hooks/use-is-mobile'
+import DatePickerLuxury from "../components/DatePickerLuxury";
 
 const services = [
   { name: "Massage", price: "10.000 - 40.000" },
@@ -120,13 +121,12 @@ const Rendezvous: React.FC = () => {
 
           <div className="date-input-box">
   <label>Date du rendez-vous</label>
-  <input
-    type="date"
-    name="date"
-    value={form.date}
-    onChange={handleChange}
-    required
-  />
+  <DatePickerLuxury
+  value={form.date}
+  onChange={(date) =>
+    setForm({ ...form, date })
+  }
+/>
 </div>
 
           <button 
